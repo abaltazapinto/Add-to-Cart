@@ -1,6 +1,6 @@
 # Shopping List
 
-Shopping List is a small web application for keeping track of items to buy. Users can add shopping items, see them appear in the shared list, and remove them by double-clicking them. List data is stored in Firebase Realtime Database.
+Shopping List is a small web application for keeping track of items to buy. Users authenticate with email and password, Google, GitHub, or Facebook, and each authenticated user has a private shopping list. Users can add items and remove them by double-clicking, and list data is stored in Firebase Realtime Database.
 
 ## Prerequisites
 

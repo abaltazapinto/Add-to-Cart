@@ -14,11 +14,52 @@
     </head>
     <body>
         <div class="container">
-            <img src="assets/cat.png">
-            <input type="text" id="input-field" placeholder="Bread">
-            <button id="add-button">Add to cart</button>
-            <ul id="shopping-list">
-            </ul>
+            <section class="auth-panel" aria-labelledby="auth-heading">
+                <h1 id="auth-heading">Shopping List</h1>
+                <p id="auth-status" role="status" aria-live="polite">No user is signed in.</p>
+                <div id="auth-controls">
+                    <input type="email" id="email-input" placeholder="Email" autocomplete="email">
+                    <input type="password" id="password-input" placeholder="Password" autocomplete="current-password">
+                    <div class="auth-actions">
+                        <button type="button" id="create-account-button">Create account</button>
+                        <button type="button" id="sign-in-button">Sign in</button>
+                    </div>
+                    <div
+                        class="social-auth-actions"
+                        role="group"
+                        aria-label="Social sign-in options"
+                    >
+                        <button type="button" id="google-sign-in-button" class="social-auth-button google-auth-button" aria-label="Continue with Google">
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 48 48">
+                                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.14-3.09-.41-4.55H24v9.02h12.94c-.56 2.91-2.26 5.38-4.83 7.04l7.73 6c4.51-4.18 7.14-10.34 7.14-17.51z"/>
+                                <path fill="#FBBC05" d="M10.53 28.59A14.7 14.7 0 0 1 9.77 24c0-1.59.27-3.14.76-4.59l-7.97-6.19A24 24 0 0 0 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.84-5.94l-7.73-6c-2.15 1.44-4.92 2.44-8.11 2.44-6.26 0-11.57-4.22-13.47-9.91l-7.97 6.19C6.51 42.62 14.62 48 24 48z"/>
+                            </svg>
+                        </button>
+                        <button type="button" id="github-sign-in-button" class="social-auth-button github-auth-button" aria-label="Continue with GitHub">
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.11-.75.41-1.27.74-1.56-2.57-.29-5.27-1.28-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.47.11-3.05 0 0 .97-.31 3.16 1.18a10.9 10.9 0 0 1 5.75 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.58.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.71 5.39-5.29 5.68.42.36.79 1.07.79 2.16v3.21c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7z"/>
+                            </svg>
+                        </button>
+                        <button type="button" id="facebook-sign-in-button" class="social-auth-button facebook-auth-button" aria-label="Continue with Facebook">
+                            <svg aria-hidden="true" focusable="false" viewBox="0 0 30 30">
+                                <circle cx="15" cy="15" r="15" fill="#1877F2"/>
+                                <path fill="#FFFFFF" d="M16.66 26v-9.1h3.05l.46-3.55h-3.51v-2.27c0-1.03.29-1.73 1.76-1.73h1.88V6.18A25.3 25.3 0 0 0 17.56 6c-2.71 0-4.57 1.66-4.57 4.7v2.65H9.92v3.55h3.07V26h3.67z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <button type="button" id="sign-out-button" hidden>Sign out</button>
+                <p id="auth-error" role="alert" aria-live="assertive"></p>
+            </section>
+            <div id="shopping-list-interface" hidden>
+                <img src="assets/cat.png">
+                <input type="text" id="input-field" placeholder="Bread">
+                <button id="add-button">Add to cart</button>
+                <ul id="shopping-list">
+                </ul>
+            </div>
         </div>
         <script src="index.js" type="module"></script>
     </body>
